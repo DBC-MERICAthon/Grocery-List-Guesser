@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    # pass @current_user
   end
 
 end
