@@ -5,8 +5,8 @@ class CreateItemsusers < ActiveRecord::Migration
       t.integer :item_id
       t.float :purchase_freq
       t.datetime :recent_purchase
-      t.integer :total_purchases
-      t.integer :quantity
+      t.integer :total_purchases, default: 0
+      t.integer :quantity, default: 1
 
       t.timestamps null: false
     end
