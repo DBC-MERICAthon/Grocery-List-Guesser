@@ -15,7 +15,7 @@ class WelcomeController < ApplicationController
       #   #get items data and render list homepage
         @list = get_list(@u.id)
         p 'rendering'
-        render partial: "welcome/index", locals: { user: @u items: @items}
+        render partial: "welcome/index", locals: { user: @u, items: @items}
       end
     end
   end
