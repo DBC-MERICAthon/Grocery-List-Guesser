@@ -14,12 +14,13 @@ $(document).ready(function(){
         data: { "auth_id": $auth_id, "name": $user_name },
       }).done(function(resp){
         $("#card").css("display", "block")
+        $(".item-cards-list").append(resp)
         $("#index-salmon").empty()
         $("#index-bowl").empty()
         $("#index-onion").empty()
         $(".cycle-circles").empty()
-        $("header").css("background-color", "green")
-        $("footer").css("background-color", "green")
+        $("header").css("background-color", "#00ed2b")
+        $("footer").css("background-color", "#00ed2b")
         $("body").css("background-image", "url()")
       })
     })
