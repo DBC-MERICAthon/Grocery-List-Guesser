@@ -25,5 +25,10 @@ class WelcomeController < ApplicationController
         render partial: "welcome/index", locals: { user: @u, list: @list}
       end
     end
+
+    session = {
+      user_id: @u.id
+    }
+
   end
 end
