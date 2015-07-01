@@ -1,27 +1,23 @@
-<div class="container" id="card">
-  <div class="front list-view">
-    <h1 class="view-card-title">Your Grocery List</h1>
-    <i class="fa fa-bars fa-lg options-icon"></i>
-    <div class="item-cards-list">
-      <% list.each do |item| %>
-      <% p 'LIST HERE' %>
-      <% p list %>
-      <% @item = item %>
-      <%= render "welcome/index", locals: {item: @item} %>
-      <% end %>
-    </div>
-    <!-- <i class="fa fa-plus-square-o fa-2x add-item-icon"></i> -->
-
+<div class="front list-view">
+  <h1 class="view-card-title">Your Grocery List</h1>
+  <i class="fa fa-bars fa-lg options-icon"></i>
+  <div class="item-cards-list">
+    <% list.each do |item| %>
+    <% p 'LIST HERE' %>
+    <% p list %>
+    <% @item = item %>
+    <%= render "welcome/index", locals: {item: @item} %>
+    <% end %>
   </div>
-  <div id="formDiv">
-    <form id="addForm" action="/items" method="POST">
-      <input type="text" name="name"/>
-      <input type="text" name="description"/>
-      <input type="text" name="category"/>
-      <input id="addButton" type="submit" value="Add Item"/>
-    </form>
-  </div>
-  <div class="back">
-    adlk;jasdf
-  </div>
+</div>
+<div id="formDiv">
+  <form id="addForm" action="/items" method="POST">
+    <input type="text" name="name" placeholder="name"/>
+    <input type="text" name="description" placeholder="description"/>
+    <input type="text" name="category" placeholder="category"/>
+    <input id="addButton" type="submit" value="Add Item"/>
+  </form>
+</div>
+<div class="back">
+  adlk;jasdf
 </div>
