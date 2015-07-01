@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :users do
-    resources :itemsusers
-  end
+  # resources :users do
+  #   resources :itemsusers
+  # end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -13,6 +13,11 @@ Rails.application.routes.draw do
   # Example of regular route:
    post '/create' => 'welcome#create'
 
+   post '/items' => 'items#create'
+
+   post '/itemsusers' => 'itemsusers#create'
+   put '/itemsusers/:id' => 'itemsusers#update'
+   delete '/itemsusers/:id' => 'itemsusers#destroy'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
