@@ -20,26 +20,29 @@
 // this should be the actual form for the item name
 
 var bindForm = function(e){
-  e.on('click', function(){
+  $(document).on('click', ':submit#addButton', function(e){
     e.preventDefault();
-    addItem();
+    addItem(e);
   })
 }
 
-bindForm($('some-submit-css'));
+// bindForm($('some-submit-css'));
 
-function addItem(el){
-  var item = $(el).serialize()
-  var category = args.category
-  var description =
-  var name = 
-  $.ajax({
-    url: "/items",
-    type: "POST",
-    data: {"name": $name, "description": $description, "category": $category}
-  })
-  .done(function(response){
-  })
+function addItem(event){
+  var form = $('#addForm');
+  var data = form.serialize();
+  console.log(data);
+  // var category = args.category
+  // var description =
+  // var name = 
+  // $.ajax({
+  //   url: "/items",
+  //   type: "POST",
+  //   data: data//{"name": $name, "description": $description, "category": $category}
+  // })
+  // .done(function(response){
+  //   console.log(response);
+  // })
 }
 
 
