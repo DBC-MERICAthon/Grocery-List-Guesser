@@ -26,6 +26,7 @@ header {
   margin-left: 10px;
   margin-top: 22.5px;
   font-size: 26px;
+  font-weight: lighter;
 }
 
 #login-button {
@@ -35,10 +36,15 @@ header {
   height: 35px;
   width: 175px;
   float: right;
+  background-color: #DF4A32;
+  color: white;
+  border: none;
+  border-radius: 2.5px;
 }
 
 .login-google-icon {
   top: 5px;
+  color: white;
 }
 
 .arrows-container {
@@ -119,17 +125,20 @@ footer {
   margin: 10px;
 }
 
-
-
-
-
-
 .list-view {
   margin-top: 5%;
-  border: solid 1px black;
-  height: 63.5vh;
+  height: 55vh;
   overflow-y: scroll;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 2px 2px 2px 2px #BDBDBD;
+  border-style: solid;
+  border-top: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  border-left: 0px;
+  background-color: #FAFAFA;
 }
 
 .view-card-title {
@@ -149,49 +158,64 @@ footer {
   margin: 0px 50px 2% 50px;
 }
 
+
 .item-card {
+  background-color: white;
   border: solid 1px black;
   height: 225px;
   width: 175px;
   float: left;
   margin: 2.5% 2.74%;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 2px 2px 2px 2px #BDBDBD;
+  border-style: solid;
+  border-top: 1px;
+  border-right: 2px;
+  border-bottom: 2px;
+  border-left: 0px;
 }
 
 .card-category {
-  font-size: 12px;
+  font-size: 11px;
+  position: absolute;
+  display: inline;
 }
 
 .card-category-icon {
   float: left;
   margin-left: 7px;
-  margin-top: 14px;
+  margin-top: 9px;
   margin-right: 7px;
 }
 
 .card-category-text {
-  margin: 10px 0px 0px 0px;
+  margin: 5px 0px 0px 0px;
   float: left;
 }
 
 .card-title {
-  border-top: solid 1px black;
-  border-bottom: solid 1px black;
+  border-top: solid 1px #BDBDBD;
+  border-bottom: solid 1px #BDBDBD;
   width: 100%;
   margin: 0px;
   text-align: center;
   margin-top: 30px;
+  color: black;
 }
 
 .card-title-text {
   padding-top: 4px;
   padding-bottom: 4px;
   margin: 0px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .card-description {
   margin: 0px;
   width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .card-description-title {
@@ -205,20 +229,31 @@ footer {
 }
 
 .card-options {
-  clear: both;
-  bottom: 20px;
-  border-top: solid 1px black;
+  position: absolute;
+  display: inline;
+  border-top: solid 1px #BDBDBD;
+  width: 95%;
+  padding-top: 5px;
+  padding-left: 5%;
+  top: 195px;
+}
+
+.card-options-icons {
+  float: left;
 }
 
 .checkbox-icon {
+  padding-top: 2px;
   float: left;
 }
 
 .edit-icon {
-  margin-left: 35%;
+  margin-left: 32%;
 }
 
 .delete-icon {
+  padding-top: 2px;
+  padding-right: 7%;
   float: right;
 }
 
@@ -226,7 +261,14 @@ footer {
   display: none;
 }
 
+#formDiv {
+  text-align: center;
+  margin-top: -4em;
+}
 
+#check-mark {
+  display: none;
+}
 
 
 
@@ -243,4 +285,13 @@ footer {
 }
 
 
-*/
+*//*
+
+
+header {
+  background-color: green;
+}
+
+footer {
+  background-color: green;
+}*/
