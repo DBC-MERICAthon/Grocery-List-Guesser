@@ -15,14 +15,14 @@ class WelcomeController < ApplicationController
         p "Here's list:"
         p @list
         p 'rendering'
-        render partial: "welcome/index", locals: { user: @u, list: @list}
+        render partial: "welcome/main", locals: { user: @u, list: @list}
       else
       #   #get items data and render list homepage
         @list = @u.get_list
         p "Here's list:"
         p @list
         p 'rendering'
-        render partial: "welcome/index", locals: { user: @u, list: @list}
+        render partial: "welcome/main", locals: { user: @u, list: @list}
       end
     end
 
