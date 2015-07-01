@@ -14,7 +14,9 @@ $(document).ready(function(){
         data: { "auth_id": $auth_id, "name": $user_name },
       }).done(function(resp){
         // $("#card").css("display", "block")
-        console.log(resp)
+
+        $("body").append(resp)
+
         $("#index-salmon").empty()
         $("#index-bowl").empty()
         $("#index-onion").empty()
