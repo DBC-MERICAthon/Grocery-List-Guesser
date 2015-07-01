@@ -60,24 +60,8 @@ textarea {
     border: 1px solid red;
 }
 
-.arrow {
-    color: white;
-    font-size: 3.5em;
-    margin-top: -5em;
-}
-
-.left-arrow {
-    float: left;
-    margin-left: 2em;
-}
-
-.right-arrow {
-    float: right;
-    margin-right: 2em;
-}
-
 footer {
-    font-family: Raleway;
+    font-family: CabinRegular;
     position: absolute;
     border-top: solid 1px white;
     width: 100%;
@@ -88,8 +72,20 @@ footer {
     bottom: 0px;
 }
 
+@font-face {
+    font-family: TheSoulOfVodka;
+    src: url("/assets/TheSoulOfVodka.ttf") format("truetype");
+}
 
+@font-face {
+    font-family: CabinRegular;
+    src: url("/assets/cabin/Cabin-Regular.ttf") format("truetype");
+}
 
+@font-face {
+    font-family: RalewayRegular;
+    src: url("/assets/raleway/Raleway-Regular.ttf") format("truetype");
+}
 
 
 /* ==========================================================================
