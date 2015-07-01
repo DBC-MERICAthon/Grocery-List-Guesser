@@ -138,6 +138,7 @@ footer {
   border-right: 2px;
   border-bottom: 2px;
   border-left: 0px;
+  background-color: #FAFAFA;
 }
 
 .view-card-title {
@@ -158,12 +159,8 @@ footer {
 }
 
 
-
-
-
-
-
 .item-card {
+  background-color: white;
   border: solid 1px black;
   height: 225px;
   width: 175px;
@@ -204,6 +201,7 @@ footer {
   margin: 0px;
   text-align: center;
   margin-top: 30px;
+  color: black;
 }
 
 .card-title-text {
@@ -263,7 +261,9 @@ footer {
   display: none;
 }
 
-
+#check-mark {
+  display: none;
+}
 
 
 

@@ -9,6 +9,8 @@ $(document).on("page:change", function() {
   // onionToSalmon();
   // onionToBowl();
   flipCard();
+  completeItem();
+  undoCompleteItem();
 })
 
 var circleOneClick = function() {
@@ -83,7 +85,21 @@ var circleThreeClick = function() {
 // }
 
 var flipCard = function() {
-  $(".add-item-icon").on("click", function() {
-    console.log("FLIPPED MOTHERFUCKERS")
+  $(".options-icon").on("click", function() {
+    console.log("FLIPPED MOTHERFUCKER")
+  })
+}
+
+var completeItem = function() {
+  $("#empty-box").on("click", function() {
+    $("#check-mark").css("display", "block")
+    $("empty-box").css("display", "none")
+  })
+}
+
+var undoCompleteItem = function() {
+  $("#check-mark").on("click", function() {
+    $("#check-mark").css("display", "none")
+    $("empty-box").css("display", "block")
   })
 }
