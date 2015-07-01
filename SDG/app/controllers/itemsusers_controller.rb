@@ -1,12 +1,8 @@
 class ItemsusersController < ApplicationController
 
-  def index
-  end
-
-  def new
-  end
 
   def create
+    
   end
 
   def update
@@ -15,7 +11,7 @@ class ItemsusersController < ApplicationController
   def destroy
   end
 
-  def show
-  end
+  # def show
+  # end
 
 end
