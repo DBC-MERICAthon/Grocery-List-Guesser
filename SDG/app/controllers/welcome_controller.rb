@@ -7,6 +7,8 @@ class WelcomeController < ApplicationController
       # binding.pry
       @u = User.where(auth_id: params["auth_id"]).first
       p @u
+      # binding.pry
+      # @list = @u.itemsers
       if @u.nil?
         @u = User.create( auth_id: params["auth_id"], name: params["name"] )
       else
