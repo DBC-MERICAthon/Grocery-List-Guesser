@@ -11,9 +11,16 @@ class WelcomeController < ApplicationController
       # @list = @u.itemsers
       if @u.nil?
         @u = User.create( auth_id: params["auth_id"], name: params["name"] )
+        @list = @u.get_list
+        p "Here's list:"
+        p @list
+        p 'rendering'
+        render partial: "welcome/index", locals: { user: @u, list: @list}
       else
       #   #get items data and render list homepage
         @list = @u.get_list
+        p "Here's list:"
+        p @list
         p 'rendering'
         render partial: "welcome/index", locals: { user: @u, list: @list}
       end

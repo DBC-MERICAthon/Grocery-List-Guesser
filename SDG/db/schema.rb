@@ -18,11 +18,11 @@ ActiveRecord::Schema.define(version: 20150630213037) do
 
   create_table "items", force: :cascade do |t|
     t.string   "name"
-    t.string   "api_id"
+    t.string   "description"
     t.string   "category"
-    t.integer  "shelf_life_days"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.integer  "shelf_life_days", default: 14
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   create_table "itemsusers", force: :cascade do |t|
