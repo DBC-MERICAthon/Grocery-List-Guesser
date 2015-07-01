@@ -13,7 +13,7 @@ class WelcomeController < ApplicationController
         @u = User.create( auth_id: params["auth_id"], name: params["name"] )
       else
       #   #get items data and render list homepage
-        @list = get_list(@u.id)
+        @list = @u.get_list
         p 'rendering'
         render partial: "welcome/index", locals: { user: @u, list: @list}
       end
