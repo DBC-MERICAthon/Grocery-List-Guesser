@@ -13,10 +13,15 @@ $(document).ready(function(){
         url: '/create',
         data: { "auth_id": $auth_id, "name": $user_name },
       }).done(function(resp){
-        // $('#target').append(resp)
-        console.log(resp)
+        $("#card").css("display", "block")
+        $("#index-salmon").empty()
+        $("#index-bowl").empty()
+        $("#index-onion").empty()
+        $(".cycle-circles").empty()
+        $("header").css("background-color", "green")
+        $("footer").css("background-color", "green")
+        $("body").css("background-image", "url()")
       })
-
     })
   });
 })
