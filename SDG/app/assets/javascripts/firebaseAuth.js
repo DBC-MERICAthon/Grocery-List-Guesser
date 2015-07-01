@@ -13,7 +13,7 @@ $(document).ready(function(){
         url: '/create',
         data: { "auth_id": $auth_id, "name": $user_name },
       }).done(function(resp){
-        $("#card").css("display", "block")
+        // $("#card").css("display", "block")
         $("#index-salmon").empty()
         $("#index-bowl").empty()
         $("#index-onion").empty()
