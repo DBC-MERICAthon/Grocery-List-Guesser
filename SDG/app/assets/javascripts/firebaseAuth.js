@@ -14,17 +14,16 @@ $(document).ready(function(){
         url: '/create',
         data: { "auth_id": $auth_id, "name": $user_name },
       }).done(function(resp){
-        // $("#card").css("display", "block")
-
-        $("body").append(resp)
-        console.log(resp)
-
+        $("#card").css("display", "block")
+        $("#card").append(resp)
         $("#index-salmon").empty()
         $("#index-bowl").empty()
         $("#index-onion").empty()
         $(".cycle-circles").empty()
-        $("header").css("background-color", "green")
-        $("footer").css("background-color", "green")
+        $("#login-button").empty()
+        $("#login-button").css("background-color", "transparent")
+        $("header").css("background-color", "#43A047")
+        $("footer").css("background-color", "#43A047")
         $("body").css("background-image", "url()")
       })
     })
@@ -46,7 +45,7 @@ function addItem(event){
   console.log(data);
   // var category = args.category
   // var description =
-  // var name = 
+  // var name =
   $.ajax({
     url: "/items",
     type: "POST",
@@ -54,6 +53,9 @@ function addItem(event){
   })
   .done(function(response){
     console.log(response);
+    $("#name-field").val("")
+    $("#description-field").val("")
+    $("#category-field").val("")
     $('.item-cards-list').append(response)
   })
 }
