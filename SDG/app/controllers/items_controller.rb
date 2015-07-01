@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
   private
 
   def strong_params
-    #params.require(:some_name_of_json).permit(:name, :description, :category)
+    params.require(:some_name_of_json).permit(:name, :description, :category)
   end
 
 end
