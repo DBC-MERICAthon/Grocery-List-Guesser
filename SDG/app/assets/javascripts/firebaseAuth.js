@@ -4,7 +4,19 @@ $(document).ready(function() {
     if (error) {
       console.log("Login Failed!", error);
     } else {
-      console.log("Authenticated successfully with payload:", authData);
+      debugger
+      console.log("Authenticated successfully with payload:", authData)
+
+      $auth_id = authData.uid;
+      $user_name = authData.google.displayName;
+      
+
+      $.ajax({
+        type: "POST",
+        dataType: "JSON",
+        url: '/create',
+        data: { "auth_id": $auth_id, "name": $user_name }
+      })
     }
   });
 });
