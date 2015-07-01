@@ -3,6 +3,7 @@ $(document).ready(function(){
 
     e.preventDefault();
     console.log("prevent this shit");
+    bindForm();
 
     googleAuth().then(function(aData){
       $auth_id = aData.uid;
@@ -14,7 +15,7 @@ $(document).ready(function(){
         data: { "auth_id": $auth_id, "name": $user_name },
       }).done(function(resp){
         $("#card").css("display", "block")
-        $(".item-cards-list").append(resp)
+        $("#card").append(resp)
         $("#index-salmon").empty()
         $("#index-bowl").empty()
         $("#index-onion").empty()
@@ -29,6 +30,35 @@ $(document).ready(function(){
   });
 })
 
+var bindForm = function(){
+  $(document).on('click', ':submit#addButton', function(e){
+    e.preventDefault();
+    addItem(e);
+  })
+}
+
+// bindForm($('some-submit-css'));
+
+function addItem(event){
+  var form = $('#addForm');
+  var data = form.serialize();
+  console.log(data);
+  // var category = args.category
+  // var description =
+  // var name =
+  $.ajax({
+    url: "/items",
+    type: "POST",
+    data: data//{"name": $name, "description": $description, "category": $category}
+  })
+  .done(function(response){
+    console.log(response);
+    $("#name-field").val("")
+    $("#description-field").val("")
+    $("#category-field").val("")
+    $('.item-cards-list').append(response)
+  })
+}
 
 function googleAuth(){
   var promise = new Promise(function(resolve, reject){

@@ -127,9 +127,9 @@ footer {
 
 .list-view {
   margin-top: 5%;
-  height: 63.5vh;
+  height: 55vh;
   overflow-y: scroll;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
   border-radius: 2px;
   position: relative;
   box-shadow: 2px 2px 2px 2px #BDBDBD;
@@ -259,6 +259,11 @@ footer {
 
 #card {
   display: none;
+}
+
+#formDiv {
+  text-align: center;
+  margin-top: -4em;
 }
 
 #check-mark {

@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.find_or_create(params)
+    render partial: "welcome/index", locals: {item: @item}
   end
 
   #Need to check strong params name here and assign after ajaxed in
