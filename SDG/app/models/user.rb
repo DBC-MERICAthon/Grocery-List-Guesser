@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
     list = predictions.map do |relation|
       Item.where(id: relation.item_id)
     end
-    return list
+    return list.flatten
   end
 
 end

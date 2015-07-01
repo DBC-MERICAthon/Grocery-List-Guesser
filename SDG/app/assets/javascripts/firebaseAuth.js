@@ -16,6 +16,7 @@ $(document).ready(function(){
         // $("#card").css("display", "block")
 
         $("body").append(resp)
+        console.log(resp)
 
         $("#index-salmon").empty()
         $("#index-bowl").empty()

@@ -3,22 +3,21 @@
 
 
 <div class="test">
-  <% @list.each do |item| %>
 
   <div class="item-card">
     <div class="card-category">
       <i class="fa fa-coffee card-category-icon"></i>
-      <h3 class="card-category-text">Category: <%= item.first.category %></h3>
+      <h3 class="card-category-text">Category: <%= @item.category %></h3>
     </div>
     <div class="card-title">
-      <h1 class="card-title-text"><%= item.first.name.upcase %></h1>
+      <h1 class="card-title-text"><%= @item.name.upcase %></h1>
     </div>
     <div class="card-description">
       <h5 class="card-description-title">
         Description:
       </h5>
       <p class="card-decription-text">
-        <%= item.first.description %>
+        <%= @item.description %>
       </p>
     </div>
     <div class="card-options">
@@ -28,7 +27,6 @@
 
     </div>
   </div>
-  <% end %>
 </div>
 
 
