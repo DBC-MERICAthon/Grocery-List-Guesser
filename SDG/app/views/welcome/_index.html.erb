@@ -1,1 +1,16 @@
-<div class="test">this is a test of sdg</div>
+<div class="test"><%= @u.name %>'s List:</div>
+
+
+
+<div class="test">
+    <% @list.each do |item| %>
+    Name:
+    <%= item.first.name %><br>
+    Category:
+    <%= item.first.category %><br>
+    Description:
+    <%= item.first.description %><br><br>
+
+    <% end %>
+</div>
+
