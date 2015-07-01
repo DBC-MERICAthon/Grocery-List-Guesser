@@ -9,7 +9,9 @@ class User < ActiveRecord::Base
     all_relations = self.itemsusers
     time = Time.now
     predictions = all_relations.select do |relation|
-      relation.purchase_freq < (time - relation.recent_purchase)
+      if relation.purchase_freq
+        relation.purchase_freq < (time - relation.recent_purchase)
+      end
     end
     list = predictions.map do |relation|
       Item.where(id: relation.item_id)
