@@ -19,30 +19,30 @@
 
 // this should be the actual form for the item name
 
-var bindForm = function(e){
-  $(document).on('click', ':submit#addButton', function(e){
-    e.preventDefault();
-    addItem(e);
-  })
-}
+// var bindForm = function(){
+//   $(document).on('click', ':submit#addButton', function(e){
+//     e.preventDefault();
+//     addItem(e);
+//   })
+// }
 
-// bindForm($('some-submit-css'));
+// // bindForm($('some-submit-css'));
 
-function addItem(event){
-  var form = $('#addForm');
-  var data = form.serialize();
-  console.log(data);
-  // var category = args.category
-  // var description =
-  // var name = 
-  // $.ajax({
-  //   url: "/items",
-  //   type: "POST",
-  //   data: data//{"name": $name, "description": $description, "category": $category}
-  // })
-  // .done(function(response){
-  //   console.log(response);
-  // })
-}
+// function addItem(event){
+//   var form = $('#addForm');
+//   var data = form.serialize();
+//   console.log(data);
+//   // var category = args.category
+//   // var description =
+//   // var name = 
+//   // $.ajax({
+//   //   url: "/items",
+//   //   type: "POST",
+//   //   data: data//{"name": $name, "description": $description, "category": $category}
+//   // })
+//   // .done(function(response){
+//   //   console.log(response);
+//   // })
+// }
 
 
