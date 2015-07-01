@@ -13,7 +13,7 @@ $(document).ready(function(){
         url: '/create',
         data: { "auth_id": $auth_id, "name": $user_name },
       }).done(function(resp){
-        // $('#target').append(resp)
+        $('#target').append(resp)
         console.log(resp)
       })
 
