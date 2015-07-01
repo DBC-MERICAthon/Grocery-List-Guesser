@@ -30,10 +30,10 @@ ActiveRecord::Schema.define(version: 20150630213037) do
     t.integer  "item_id"
     t.float    "purchase_freq"
     t.datetime "recent_purchase"
-    t.integer  "total_purchases"
-    t.integer  "quantity"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.integer  "total_purchases", default: 0
+    t.integer  "quantity",        default: 1
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -41,9 +41,9 @@ ActiveRecord::Schema.define(version: 20150630213037) do
     t.string   "auth_id"
     t.float    "shopping_freq"
     t.datetime "recent_trip"
-    t.integer  "total_trips"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.integer  "total_trips",   default: 0
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
 end
