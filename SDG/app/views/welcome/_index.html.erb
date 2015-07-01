@@ -1,1 +1,40 @@
-<div class="test">this is a test of sdg</div>
+<div class="test"><%= @u.name %>'s List:</div>
+
+
+
+<div class="test">
+    <% @list.each do |item| %>
+    Name:
+    <%= item.first.name %><br>
+    Category:
+    <%= item.first.category %><br>
+    Description:
+    <%= item.first.description %><br><br>
+
+    <% end %>
+</div>
+
+
+        <div class="item-card">
+          <div class="card-category">
+            <i class="fa fa-coffee card-category-icon"></i>
+            <h3 class="card-category-text">Category: Coffee</h3>
+          </div>
+          <div class="card-title">
+            <h1 class="card-title-text">COFFEE</h1>
+          </div>
+          <div class="card-description">
+            <h5 class="card-description-title">
+              Description:
+            </h5>
+            <p class="card-decription-text">
+              This is the description here hel;adsf kljvzcvoiqer   ajkdsfa asdflkajds
+            </p>
+          </div>
+          <div class="card-options">
+            <i class="fa fa-square-o fa-lg checkbox-icon"></i>
+            <i class="fa fa-pencil-square-o fa-lg edit-icon"></i>
+            <i class="fa fa-trash-o fa-lg delete-icon"></i>
+
+          </div>
+        </div>
