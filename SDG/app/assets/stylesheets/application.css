@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {
+    font-family: Cabin-Regular;
+    src: url("../images/cabin/Cabin-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Raleway-Regular;
+    src: url("../images/raleway/Raleway-Medium.ttf") format("truetype");
+}
