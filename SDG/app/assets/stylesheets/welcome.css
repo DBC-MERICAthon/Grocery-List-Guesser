@@ -1,6 +1,6 @@
 body {
   font-family: CabinRegular;
-  background: url("/assets/salmon.jpg");
+  /*background: url("/assets/salmon.jpg");*/
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -205,9 +205,11 @@ footer {
 }
 
 .card-options {
-  clear: both;
-  bottom: 20px;
   border-top: solid 1px black;
+}
+
+.card-options-icons {
+  bottom: 0px;
 }
 
 .checkbox-icon {
@@ -221,10 +223,10 @@ footer {
 .delete-icon {
   float: right;
 }
-
+/*
 #card {
   display: none;
-}
+}*/
 
 
 
@@ -244,3 +246,12 @@ footer {
 
 
 */
+
+
+header {
+  background-color: green;
+}
+
+footer {
+  background-color: green;
+}
