@@ -6,13 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-test_items = Item.create([{name: 'test 1 item name', api_id: 'test 1 api id', category: 'test 1 category'}, {name: 'test 2 item name', api_id: 'test 2 api id', category: 'test 2 category'}])
+# test_items = Item.create([{name: 'test 1 item name', api_id: 'test 1 api id', category: 'test 1 category'}, {name: 'test 2 item name', api_id: 'test 2 api id', category: 'test 2 category'}])
 
 produce_items = Item.create([{name: 'apple', category: 'produce'}, {name: 'orange', category: 'produce'}, {name: 'carrot', category: 'produce'}, {name: 'potato', category: 'produce'}, {name: 'broccoli', category: 'produce'}])
 
 protein_items = Item.create([{name: 'chicken', category: 'meat/fish/poultry'}, {name: 'salmon', category: 'meat/fish/poultry'}, {name: 'ground beef', category: 'meat/fish/poultry'}, {name: 'lamb chops', category: 'meat/fish/poultry'}, {name: 'bacon', category: 'meat/fish/poultry'}])
 
-dairy_items = Item.create([{name: 'milk', category: 'dairy'}, {name: 'yogurt', category: 'dairy'}, {name: 'cheese', category: 'dairy'}, {name: 'butter', category: 'dairy'}])
+dairy_items = Item.create([{name: 'milk', category: 'dairy', shelf_life_days: 7}, {name: 'yogurt', category: 'dairy', shelf_life_days: 7}, {name: 'cheese', category: 'dairy', shelf_life_days: 7}, {name: 'butter', category: 'dairy', shelf_life_days: 7}])
 
 bakery_items = Item.create([{name: 'bread', category: 'bakery'}, {name: 'bagels', category: 'bakery'}, {name: 'muffins', category: 'bakery'}, {name: 'pita bread', category: 'bakery'}])
 
