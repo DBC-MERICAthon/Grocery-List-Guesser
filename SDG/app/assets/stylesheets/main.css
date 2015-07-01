@@ -60,18 +60,6 @@ textarea {
     border: 1px solid red;
 }
 
-footer {
-    font-family: CabinRegular;
-    position: absolute;
-    border-top: solid 1px white;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-weight: 100;
-    font-size: 0.8em;
-    bottom: 0px;
-}
-
 @font-face {
     font-family: TheSoulOfVodka;
     src: url("/assets/TheSoulOfVodka.ttf") format("truetype");

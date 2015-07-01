@@ -8,6 +8,7 @@ $(document).on("page:change", function() {
   // bowlToSalmon();
   // onionToSalmon();
   // onionToBowl();
+  flipCard();
 })
 
 var circleOneClick = function() {
@@ -80,3 +81,9 @@ var circleThreeClick = function() {
 // var onionToBowl = function() {
 
 // }
+
+var flipCard = function() {
+  $(".add-item-icon").on("click", function() {
+    console.log("FLIPPED MOTHERFUCKERS")
+  })
+}
