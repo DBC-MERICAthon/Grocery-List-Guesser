@@ -1,0 +1,16 @@
+<div class="container" id="card">
+  <div class="front list-view">
+    <h1 class="view-card-title">Your Grocery List</h1>
+    <i class="fa fa-bars fa-lg options-icon"></i>
+    <div class="item-cards-list">
+      <% @list.each do |item| %>
+      <%= render "welcome/index", locals: {item: item} %>
+      <% end %>
+    </div>
+    <!-- <i class="fa fa-plus-square-o fa-2x add-item-icon"></i> -->
+
+  </div>
+  <div class="back">
+    adlk;jasdf
+  </div>
+</div>
