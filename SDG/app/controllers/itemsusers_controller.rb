@@ -2,7 +2,12 @@ class ItemsusersController < ApplicationController
 
 
   def create
-   @itemsuser_relation = Itemsuser.find_or_create(params)
+    args = {
+      user: current_user,
+      id: params[:id]
+    }
+   @itemsuser_relation = Itemsuser.find_or_create(args)
+   render json: { everything: 'ok' }
   end
 
   def update

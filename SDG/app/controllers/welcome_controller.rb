@@ -15,6 +15,7 @@ class WelcomeController < ApplicationController
         p "Here's list:"
         p @list
         p 'rendering'
+        session[:user_id] = @u.id
         render partial: "welcome/main", locals: { user: @u, list: @list}
       else
       #   #get items data and render list homepage
@@ -22,6 +23,7 @@ class WelcomeController < ApplicationController
         p "Here's list:"
         p @list
         p 'rendering'
+        session[:user_id] = @u.id
         render partial: "welcome/main", locals: { user: @u, list: @list}
       end
     end

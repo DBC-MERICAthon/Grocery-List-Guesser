@@ -57,6 +57,15 @@ function addItem(event){
     $("#description-field").val("")
     $("#category-field").val("")
     $('.item-cards-list').append(response)
+    var newCard = $('.item-cards-list').children().last()
+    var data = { id: newCard.attr('id') }
+    $.ajax({
+      url: "/itemsusers",
+      type: "POST",
+      data: data
+    }).done(function(response){
+      console.log(response)
+    })
   })
 }
 
