@@ -8,7 +8,7 @@ class Itemsuser < ActiveRecord::Base
     target_relation ||= self.create(item_id: args[:id], user_id: args[:user_id])
   end
 
-  def update
+  def refresh
     if self.total_purchases == 0
       self.recent_purchase = Time.now
       self.total_purchases += 1
@@ -17,7 +17,7 @@ class Itemsuser < ActiveRecord::Base
       old = Date.parse(self.recent_purchase.to_s).mjd
       now = Date.parse(current_time.to_s).mjd
       new_interval = (now - old).to_f
-      total_intervals = self.purchase_freq * self.total_purchases
+      total_intervals = (self.purchase_freq || 0) * self.total_purchases
       self.total_purchases += 1
       total_intervals += new_interval
       new_average = total_intervals.fdiv(self.total_purchases)
