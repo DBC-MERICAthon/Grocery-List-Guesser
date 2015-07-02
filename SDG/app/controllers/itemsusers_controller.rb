@@ -6,12 +6,14 @@ class ItemsusersController < ApplicationController
       user_id: current_user,
       id: params[:id]
     }
-    p args
+    # p args
    @itemsuser_relation = Itemsuser.find_or_create(args)
    render json: { everything: 'ok' }
   end
 
   def update
+    @relation = Itemsuser.where(item_id: params[:id], user_id: current_user)
+    @relation.update
   end
 
   def destroy
