@@ -1,4 +1,6 @@
 class WelcomeController < ApplicationController
+  # skip_before_filter :verify_authenticity_token, :only => :create
+
   def index
   end
 
@@ -15,6 +17,12 @@ class WelcomeController < ApplicationController
         p "Here's list:"
         p @list
         p 'rendering'
+        session[:current_user] = @u.id
+        # hello = session[:user_id]
+        p "SESSION:"
+        p session[:current_user]
+        # p hello
+        # binding.pry
         render partial: "welcome/main", locals: { user: @u, list: @list}
       else
       #   #get items data and render list homepage
@@ -22,13 +30,15 @@ class WelcomeController < ApplicationController
         p "Here's list:"
         p @list
         p 'rendering'
+        session[:current_user] = @u.id
+        # hello = session[:current_user]
+        p "SESSION:"
+        p session[:current_user]
+        # p hello
+        # binding.pry
         render partial: "welcome/main", locals: { user: @u, list: @list}
       end
     end
-
-    session = {
-      user_id: @u.id
-    }
 
   end
 end
