@@ -50,7 +50,7 @@ var bindUpdates = function(){
       type: "PUT"
     })
     update.done(function(response){
-      console.log(response)
+      // console.log(response)
       checkbox.attr('class', "fa fa-check-square-o fa-lg checkbox-icon")
       checkbox.attr('style', 'color:#43A047')
       // debugger
@@ -68,8 +68,6 @@ var bindDestruction = function(){
       type: "DELETE"
     })
     destroy.done(function(response){
-      console.log(response)
-      // debugger
       card.remove();
     })
   })
@@ -80,7 +78,7 @@ var bindDestruction = function(){
 function addItem(event){
   var form = $('#addForm');
   var data = form.serialize();
-  console.log(data);
+  // console.log(data);
   // var category = args.category
   // var description =
   // var name =
@@ -90,7 +88,7 @@ function addItem(event){
     data: data//{"name": $name, "description": $description, "category": $category}
   })
   .done(function(response){
-    console.log(response);
+    // console.log(response);
     $("#name-field").val("")
     $("#description-field").val("")
     $("#category-field").val("")
@@ -102,7 +100,7 @@ function addItem(event){
       type: "POST",
       data: data
     }).done(function(response){
-      console.log(response)
+      // console.log(response)
     })
   })
 }
