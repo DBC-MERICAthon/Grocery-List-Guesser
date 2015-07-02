@@ -42,6 +42,8 @@ var bindForm = function(){
 var bindUpdates = function(){
   $(document).on('click', '.checkbox-icon', function(e){
     e.preventDefault();
+    var checkbox = $(e.target)
+    var card = $(e.target).closest('.item-card')
     var id = $(e.target).closest('.item-card').attr('id')
     var update = $.ajax({
       url: "/itemsusers/" + id,
@@ -49,6 +51,9 @@ var bindUpdates = function(){
     })
     update.done(function(response){
       console.log(response)
+      checkbox.attr('class', "fa fa-check-square-o fa-lg checkbox-icon")
+      checkbox.attr('style', 'color:#43A047')
+      // debugger
     })
   })
 }
@@ -64,7 +69,7 @@ var bindDestruction = function(){
     })
     destroy.done(function(response){
       console.log(response)
-      debugger
+      // debugger
       card.remove();
     })
   })
