@@ -3,9 +3,10 @@ class ItemsusersController < ApplicationController
 
   def create
     args = {
-      user: current_user,
+      user_id: current_user,
       id: params[:id]
     }
+    p args
    @itemsuser_relation = Itemsuser.find_or_create(args)
    render json: { everything: 'ok' }
   end
