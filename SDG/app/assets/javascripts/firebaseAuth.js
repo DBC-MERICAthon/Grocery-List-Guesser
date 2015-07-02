@@ -4,6 +4,8 @@ $(document).ready(function(){
     e.preventDefault();
     console.log("prevent this shit");
     bindForm();
+    bindUpdates();
+    bindDestruction();
 
     googleAuth().then(function(aData){
       $auth_id = aData.uid;
@@ -34,6 +36,42 @@ var bindForm = function(){
   $(document).on('click', ':submit#addButton', function(e){
     e.preventDefault();
     addItem(e);
+  })
+}
+
+var bindUpdates = function(){
+  $(document).on('click', '.checkbox-icon', function(e){
+    e.preventDefault();
+    var checkbox = $(e.target)
+    var card = $(e.target).closest('.item-card')
+    var id = $(e.target).closest('.item-card').attr('id')
+    var update = $.ajax({
+      url: "/itemsusers/" + id,
+      type: "PUT"
+    })
+    update.done(function(response){
+      console.log(response)
+      checkbox.attr('class', "fa fa-check-square-o fa-lg checkbox-icon")
+      checkbox.attr('style', 'color:#43A047')
+      // debugger
+    })
+  })
+}
+
+var bindDestruction = function(){
+  $(document).on('click', '.delete-icon', function(e){
+    e.preventDefault
+    var card = $(e.target).closest('.item-card')
+    var id = $(e.target).closest('.item-card').attr('id')
+    var destroy = $.ajax({
+      url: "/itemsusers/" + id,
+      type: "DELETE"
+    })
+    destroy.done(function(response){
+      console.log(response)
+      // debugger
+      card.remove();
+    })
   })
 }
 
