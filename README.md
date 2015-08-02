@@ -1,4 +1,5 @@
-"Replenish" - DBC June/July 2015 Hackathon
+## "Replenish"
+- DBC June/July 2015 Hackathon -
 
 Replenish is a smart grocery list that pre-populates with suggested items based on average buying frequency. We built this Ruby on Rails app over the course of two days during the DevBootcamp Hackathon.
 
